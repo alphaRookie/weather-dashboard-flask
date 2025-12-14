@@ -6,7 +6,7 @@ A lightweight weather app (dashboard-style) built with Flask that allows users t
 
 ## Demo
 
-![Weather App Screenshot](screenshot.png)
+![Weather App Screenshot](Screenshot.png)
 
 ---
 
