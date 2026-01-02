@@ -1,6 +1,6 @@
 # Weather Dashboard — Flask 
 
-A lightweight weather app (dashboard-style) built with Flask that allows users to search for real-time weather information by city and country code. The application integrates with the OpenWeatherMap API and focuses on clean request handling, error management, and a smooth user experience.
+A lightweight weather app (dashboard-style) built with Flask that allows users to search for real-time weather information by city and country code. The application integrates with the OpenWeatherMap API and focuses on clean request handling, error management, and a smooth user experience.  The application is fully **dockerized** for easy setup and execution.
 
 ---
 
@@ -18,6 +18,7 @@ A lightweight weather app (dashboard-style) built with Flask that allows users t
 - Prevents duplicate form submission on page refresh using Post/Redirect/Get (PRG)
 - Environment-based configuration for sensitive data
 - Responsive layout optimized for both desktop and mobile devices
+- Dockerized for consistent execution across different environments
 
 ---
 
@@ -27,6 +28,7 @@ A lightweight weather app (dashboard-style) built with Flask that allows users t
 - Frontend: HTML, Jinja2, Bootstrap
 - API: OpenWeatherMap
 - Environment Management: python-dotenv
+- Containerization: Docker
 
 ---
 
@@ -43,23 +45,25 @@ A lightweight weather app (dashboard-style) built with Flask that allows users t
 
 ## Installation & Setup
 
+Firstly, make sure Docker is installed and running
+
 1. Clone the repository:
+   ```bash
    git clone https://github.com/alphaRookie/weather-dashboard-flask.git
    cd weather-dashboard-flask
+   ```
 
-2. Create and activate a virtual environment:
-   python -m venv venv
-   venv\Scripts\activate
+2. Build the Docker image:
+   ```bash
+   docker build -t myweatherapp .
+   ```
 
-3. Install dependencies:
-   pip install flask requests python-dotenv
+3. Run the Docker container:
+   ```bash
+   docker run -p 5000:5000 -e API_KEY=your_openweathermap_api_key myweatherapp
+   ```
 
-4. Create a `.env` file in the project root:
-   API_KEY=your_openweathermap_api_key
-   SECRET_KEY=your_flask_secret_key
-
-5. Run the application:
-   python app.py
-
-6. Open your browser and go to:
+4. Open your browser and go to:
+   ```bash
    http://127.0.0.1:5000
+   ```

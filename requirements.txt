@@ -1,0 +1,4 @@
+# list all frameworks, libraries, and dependencies to be used in this project
+Flask
+requests
+python-dotenv
