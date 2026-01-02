@@ -50,20 +50,25 @@ Firstly, make sure Docker is installed and running
 1. Clone the repository:
    ```bash
    git clone https://github.com/alphaRookie/weather-dashboard-flask.git
+   ```
+
+2. Move into project directory:
+   ```bash
    cd weather-dashboard-flask
    ```
 
-2. Build the Docker image:
+3. Build the Docker image:
    ```bash
    docker build -t myweatherapp .
    ```
 
-3. Run the Docker container:
+4. Run the Docker container:
    ```bash
-   docker run -p 5000:5000 -e API_KEY=your_openweathermap_api_key myweatherapp
+   docker run -p 5000:5000 -e API_KEY=YOUR_API_KEY myweatherapp
    ```
+   ⚠️ Replace YOUR_API_KEY with your own OpenWeatherMap API key.
 
-4. Open your browser and go to:
+5. Open your browser and go to:
    ```bash
    http://127.0.0.1:5000
    ```
